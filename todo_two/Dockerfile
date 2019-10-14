@@ -5,7 +5,6 @@ ENV LANG C.UTF-8
 
 RUN apk add --no-cache php7 \
                        php7-dom \
-                       php7-iconv \
                        php7-json \
                        php7-mbstring \
                        php7-opcache \
