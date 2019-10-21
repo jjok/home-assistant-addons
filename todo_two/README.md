@@ -1,4 +1,6 @@
+//TODO Two
+==========
 
-    docker build --build-arg BUILD_FROM="homeassistant/amd64-base:latest" -t jjok/todo-two-hassio .
+Runs [jjok/todo-two-web](https://github.com/jjok/todo-two-web) as a Hassio add-on.
 
-    docker run --rm -it -p 8000:8000 -v /home/jonathan/Workspace/home-assistant-addons/todo_two/data:/data --name todo-two-hassio jjok/todo-two-hassio
+API runs at http://hassio.local:8000

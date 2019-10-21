@@ -17,7 +17,8 @@ RUN apk add --no-cache php7 \
 WORKDIR /app
 
 RUN wget https://github.com/jjok/todo-two-web/archive/master.zip && \
-    unzip master.zip
+    unzip master.zip && \
+    rm master.zip
 
 WORKDIR /app/todo-two-web-master
 
@@ -32,7 +33,6 @@ RUN php composer.phar install --no-dev
 
 # Copy data for add-on
 COPY run.sh /
-#RUN chmod a+x /run.sh
+RUN chmod a+x /run.sh
 
-#CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
-CMD [ "sh", "/run.sh" ]
+CMD [ "/run.sh" ]
