@@ -12,6 +12,9 @@
   "schema": {
     "test": "str"
   },
+  "environment": {
+    "APP_ENV": "hassio"
+  },
   "ports": {
     "8000/tcp": 8000
   },
