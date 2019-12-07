@@ -7,10 +7,16 @@
   "startup": "before",
   "boot": "auto",
   "options": {
-    "test": "blah"
+    "users": [{
+      "id": "12345678-1234-5678-1234567890ab",
+      "name": "Name of user"
+    }]
   },
   "schema": {
-    "test": "str"
+    "users": [{
+      "id": "str",
+      "name": "str"
+    }]
   },
   "environment": {
     "APP_ENV": "hassio"
