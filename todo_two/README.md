@@ -10,6 +10,8 @@ API runs at http://hassio.local:8000.
 
 Install the integration from https://github.com/jjok/todo-two-home-assistant.
 
+Generate a UUID and add it to the config.
+
 Add this to your config to enable the integration.
 
     todo_two:
