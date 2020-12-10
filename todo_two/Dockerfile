@@ -3,7 +3,8 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-RUN apk add --no-cache php7 \
+RUN apk add --no-cache git \
+                       php7 \
                        php7-dom \
                        php7-json \
                        php7-mbstring \
