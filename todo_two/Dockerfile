@@ -23,10 +23,6 @@ RUN wget https://github.com/jjok/todo-two-web/archive/master.zip && \
 
 WORKDIR /app/todo-two-web-master
 
-COPY composer.sh ./
-RUN sh composer.sh && \
-    rm composer.sh
-
 #RUN php composer.phar install && \
 #    ./vendor/bin/phpunit && \
 #    php composer.phar install --no-dev
