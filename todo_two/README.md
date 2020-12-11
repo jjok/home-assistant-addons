@@ -1,9 +1,13 @@
 // Todo Two
 ===========
 
-Runs [jjok/todo-two-web](https://github.com/jjok/todo-two-web) as a Hassio add-on.
+Runs [jjok/todo-two-web](https://github.com/jjok/todo-two-web) as a Home Assistant add-on.
 
-API runs at http://hassio.local:8000.
+API runs at http://homeassistant.local:8000.
+
+All tasks data is available at: http://homeassistant.local:8000/tasks.
+
+All configured users are available at: http://homeassistant.local:8000/users.
 
 // Setup
 --------
