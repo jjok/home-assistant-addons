@@ -4,16 +4,16 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 RUN apk add --no-cache git \
-                       php7 \
-                       php7-dom \
-                       php7-json \
-                       php7-mbstring \
-                       php7-opcache \
-                       php7-openssl \
-                       php7-phar \
-                       php7-tokenizer \
-                       php7-xml \
-                       php7-xmlwriter
+                       php8 \
+                       php8-dom \
+                       php8-json \
+                       php8-mbstring \
+                       php8-opcache \
+                       php8-openssl \
+                       php8-phar \
+                       php8-tokenizer \
+                       php8-xml \
+                       php8-xmlwriter
 
 WORKDIR /app
 
@@ -22,6 +22,8 @@ RUN wget https://github.com/jjok/todo-two-web/archive/master.zip && \
     rm master.zip
 
 WORKDIR /app/todo-two-web-master
+
+RUN ln -s $(which php8) /usr/bin/php
 
 #RUN php composer.phar install && \
 #    ./vendor/bin/phpunit && \
