@@ -1,8 +1,9 @@
 {
   "name": "Todo Two",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "slug": "todo_two",
   "description": "Keep track of which tasks need to be done",
+  "url": "https://github.com/jjok/home-assistant-addons/tree/master/todo_two",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "before",
   "boot": "auto",
@@ -23,6 +24,5 @@
   },
   "ports": {
     "8000/tcp": 8000
-  },
-  "panel_icon": "mdi:format-list-checkbox"
+  }
 }
