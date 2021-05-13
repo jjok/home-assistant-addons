@@ -3,20 +3,19 @@
 
 Runs [jjok/todo-two-web](https://github.com/jjok/todo-two-web) as a Home Assistant add-on.
 
-API runs at http://homeassistant.local:8000.
 
-All tasks data is available at: http://homeassistant.local:8000/tasks.
+// Add-on setup
+---------------
 
-All configured users are available at: http://homeassistant.local:8000/users.
+Generate a UUID for your user ID and add it to the add-on config.
 
-// Setup
---------
+
+// Integration setup
+--------------------
 
 Install the integration from https://github.com/jjok/todo-two-home-assistant.
 
-Generate a UUID and add it to the config.
-
-Add this to your config to enable the integration.
+Add this to your Home Assistant config to enable the integration.
 
     todo_two:
       select: 3
@@ -53,3 +52,13 @@ Add something like this to your UI.
           hold_action:
             action: call-service
             service: todo_two.refresh
+
+
+// API Endpoints
+----------------
+
+API runs at http://homeassistant.local:8000.
+
+All tasks data is available at: http://homeassistant.local:8000/tasks.
+
+All configured users are available at: http://homeassistant.local:8000/users.
