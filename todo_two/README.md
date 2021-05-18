@@ -20,6 +20,18 @@ Add this to your Home Assistant config to enable the integration.
     todo_two:
       select: 3
 
+    sensor:
+      platform: todo_two
+      scan_interval: 600
+
+    automation:
+      - alias: Cleaning - Refresh Tasks
+        trigger:
+          platform: time
+          at: "04:00:00"
+        action:
+          - service: todo_two.refresh
+
 Add something like this to your UI.
 
     - type: horizontal-stack
@@ -45,11 +57,10 @@ Add something like this to your UI.
             service: todo_two.complete_selected_task
             service_data:
               task: 3
-        - type: entity-button
+        - type: button
           name: Refresh tasks
-          entity: todo_two.tasks_to_be_done
           icon: "mdi:refresh"
-          hold_action:
+          tap_action:
             action: call-service
             service: todo_two.refresh
 
