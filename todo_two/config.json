@@ -1,8 +1,8 @@
 {
   "name": "Todo Two",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "slug": "todo_two",
-  "description": "Keep track of which tasks need to be done",
+  "description": "Keep track of which tasks need to be done.",
   "url": "https://github.com/jjok/home-assistant-addons/tree/master/todo_two",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "services",

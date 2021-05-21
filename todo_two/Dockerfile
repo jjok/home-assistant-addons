@@ -15,13 +15,12 @@ RUN apk add --no-cache git \
                        php8-xml \
                        php8-xmlwriter
 
+RUN wget -O app.zip https://github.com/jjok/todo-two-web/archive/refs/tags/v1.0.0.zip && \
+    unzip app.zip && \
+    rm app.zip && \
+    mv todo-two-web-1.0.0 /app
+
 WORKDIR /app
-
-RUN wget https://github.com/jjok/todo-two-web/archive/master.zip && \
-    unzip master.zip && \
-    rm master.zip
-
-WORKDIR /app/todo-two-web-master
 
 RUN ln -s $(which php8) /usr/bin/php
 
@@ -30,7 +29,6 @@ RUN ln -s $(which php8) /usr/bin/php
 #    php composer.phar install --no-dev
 RUN php composer.phar install --no-dev
 
-# Copy data for add-on
 COPY run.sh /
 RUN chmod a+x /run.sh
 
